@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="icon" type="image/png" href="../images/favicon.png">
+    <link rel="stylesheet" href="../main.css/main.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        .content-container {
+            max-width: 1000px;
+            margin: 100px auto 50px;
+            padding: 30px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            animation: fadeIn 0.8s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        h1 {
+            color: #2c3e50;
+            font-size: 2.5em;
+            text-align: center;
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        h1::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background: linear-gradient(to right, #007bff, #00ff88);
+            margin: 15px auto;
+            border-radius: 2px;
+        }
+
+        hr {
+            border: 0;
+            height: 3px;
+            background: linear-gradient(to right, #007bff, #00ff88);
+            width: 100px;
+            margin: 30px auto;
+            border-radius: 2px;
+        }
+
+        h2 {
+            color: #34495e;
+            font-size: 2em;
+            margin: 30px 0;
+            text-align: center;
+            font-weight: 600;
+        }
+
+        .text {
+            color: #555;
+            font-size: 1.1em;
+            line-height: 1.8;
+            margin: 25px 0;
+            padding: 0 20px;
+            text-align: justify;
+        }
+
+        .text p {
+            margin-bottom: 20px;
+            position: relative;
+            padding-left: 20px;
+        }
+
+        .text p::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 10px;
+            width: 6px;
+            height: 6px;
+            background-color: #007bff;
+            border-radius: 50%;
+        }
+
+        .highlight-box {
+            background: linear-gradient(120deg, rgba(0,123,255,0.1) 0%, rgba(0,255,136,0.1) 100%);
+            padding: 25px;
+            border-radius: 12px;
+            margin: 30px 0;
+            border-left: 4px solid #007bff;
+        }
+
+        footer {
+            background-color: #87CEEB;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 0.9em;
+        }
+
+        /* Responsive dizayn */
+        @media screen and (max-width: 768px) {
+            .content-container {
+                margin: 80px 15px 30px;
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            h2 {
+                font-size: 1.6em;
+            }
+
+            .text {
+                font-size: 1em;
+                padding: 0 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <span class="menu-toggle" onclick="toggleMenu()">☰</span>
+            <ul id="nav-menu">
+                <li><a href="../index.html">Asosiy</a></li>
+                <li><a href="./courses.html">Kurslar</a></li>
+                <li><a href="./about.html">About</a></li>
+                <li><a href="./contact.html">Contact Us</a></li>
+                <li><a href="./login.html">LogIn</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="content-container">
+        <h1>About Us</h1>
+        <hr>
+        <h2>Biz haqimizda</h2>
+        <div class="text">
+            <div class="highlight-box">
+                <b>StarDev</b> - bu onlayn taʼlim platformasi bo'lib maqsadimiz zamonaviy bilimlarni kengaytirish va har kimga taʼlim olish imkoniyatini taqdim etishdir.
+            </div>
+            <p>
+                Bizning jamoamiz o'z sohasida mutaxassis bo'lgan tajribali o'qituvchilardan iborat bo'lib, har birimizning maqsadimiz - sizning bilim va ko'nikmalaringizni oshirishdir. Har bir kursimiz amaliy va nazariy bilimlarni birlashtirib, o'quvchilarimizni muvaffaqiyatga erishishlari uchun tayyorlaydi.
+            </p>
+            <p>
+                Bizning platformamizda turli mavzularda - dasturlash, dizayn, marketing va boshqa ko'plab sohalarda kurslar mavjud. Bizning yondashuvimiz o'z-o'zini rivojlantirish va bilimlarni amaliyotda qo'llashga asoslangan.
+            </p>
+            <p>
+                StarDev bilan taʼlim olishni tanlaganingiz uchun rahmat. Sizni bizning platformamizda kutib olishdan xursandmiz!
+            </p>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 StarDev. Barcha huquqlar himoyalangan.</p>
+    </footer>
+    <script src="../js/main.js"></script>
+</body>
+</html>
