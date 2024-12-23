@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Veb-Dasturlash</title>
+    <link rel="icon" type="image/png" href="../images/favicon.png">
+    <link rel="stylesheet" href="../main.css/main.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: #0056b3;
+            color: #fff;
+            width: 100%;
+            padding: 10px 0;
+            text-align: center;
+            position: fixed;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        main {
+            padding: 80px 20px 20px; /* 80px top padding for fixed header */
+            width: 100%;
+            max-width: 960px;
+            box-sizing: border-box;
+            text-align: center;
+        }
+
+        h1 {
+            color: #0056b3;
+            margin: 20px 0;
+            font-size: 2em; /* Katta shrift */
+        }
+
+        p {
+            font-size: 1.2em;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        hr {
+            width: 80%;
+            border: 0;
+            height: 1px;
+            background: #ddd;
+            margin: 20px 0;
+        }
+
+        .course {
+            text-align: center;
+            margin: 40px 0;
+        }
+
+        .course img {
+            max-width: 200px; /* Katta o'lcham */
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        .course a {
+            display: inline-block;
+            padding: 15px 30px; /* Katta tugma */
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px; /* Katta shrift */
+            text-transform: uppercase;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+            margin-top: 10px;
+        }
+
+        .course a:hover {
+            background-color: #0056b3;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <span class="menu-toggle" onclick="toggleMenu()">☰</span>
+            <ul id="nav-menu">
+                <li><a href="../index.html">Asosiy</a></li>
+                <li><a href="./courses.html">Kurslar</a></li>
+                <li><a href="./about.html">About</a></li>
+                <li><a href="./contact.html">Contact Us</a></li>
+                <li><a href="./login.html">LogIn</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Veb-Dasturlash</h1>
+        <hr>
+        <p><strong>Kursni tanlang:</strong> <i>HTML, CSS, Javascript</i></p>
+        <hr>
+        <div class="course">
+            <h1>HTML</h1>
+            <img src="../images/htmllogo.jpg" alt="HTML logo">
+            <a href="./htmlvideos.html">HTML kursi</a>
+        </div>
+        <div class="course">
+            <h1>CSS</h1>
+            <img src="../images/csslogo.jpg" alt="CSS logo">
+            <a href="./cssvideos.html">CSS kursi</a>
+        </div>
+        <div class="course">
+            <h1>JavaScript</h1>
+            <img src="../images/jslogo.jpg" alt="JavaScript logo">
+            <a href="./jsvideos.html">JavaScript kursi</a>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 StarDev. Barcha huquqlar himoyalangan.</p>
+    </footer>
+    <script src="../js/main.js"></script>
+</body>
+</html>
