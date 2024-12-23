@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StarDev - Asosiy Sahifa</title>
+    <link rel="icon" type="image/png" href="./images/favicon.png">
+    <link rel="stylesheet" href="./main.css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        main {
+            flex: 1;
+            max-width: 1200px;
+            margin: 80px auto 40px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .hero-section {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            margin: 20px auto;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+        }
+
+        h1 {
+            color: #2c3e50;
+            font-size: 2.5em;
+            margin: 20px 0;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .logo-title {
+            background: linear-gradient(to right, #007bff, #00ff88);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-size: 3.5em;
+            font-weight: 800;
+            margin: 30px 0;
+        }
+
+        hr {
+            border: 0;
+            height: 3px;
+            background: linear-gradient(to right, #007bff, #00ff88);
+            width: 100px;
+            margin: 30px auto;
+        }
+
+        .logo-container {
+            position: relative;
+            display: inline-block;
+            margin: 30px 0;
+        }
+
+        .logo-container img {
+            width: 200px;
+            height: 200px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .logo-container:hover img {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .logo-container::after {
+            content: '';
+            position: absolute;
+            bottom: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 150px;
+            height: 15px;
+            background: radial-gradient(ellipse at center, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0) 70%);
+            border-radius: 50%;
+        }
+
+        .description {
+            font-size: 1.2em;
+            line-height: 1.8;
+            color: #555;
+            margin: 30px auto;
+            max-width: 600px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .platform-section {
+            margin: 30px 0;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .platform-section h3 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+        }
+
+        .social-links {
+            margin-top: 40px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .social-links h3 {
+            color: #2c3e50;
+            font-size: 1.5em;
+            margin-bottom: 25px;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin: 0 auto;
+            max-width: 500px;
+        }
+
+        .social-icon {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 15px 10px;
+            border-radius: 12px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            min-width: 100px;
+            max-width: 150px;
+        }
+
+        .social-icon i {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        .social-icon span {
+            font-size: 0.9em;
+            font-weight: 600;
+        }
+
+        .youtube {
+            background: linear-gradient(135deg, #ff0000 0%, #ff5555 100%);
+            color: white;
+        }
+
+        .telegram {
+            background: linear-gradient(135deg, #0088cc 0%, #0099ff 100%);
+            color: white;
+        }
+
+        .instagram {
+            background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+            color: white;
+        }
+
+        .social-icon:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .platform-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 15px 30px;
+            background: linear-gradient(to right, #007bff, #00a1ff);
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3);
+        }
+
+        .platform-link:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0, 123, 255, 0.4);
+            background: linear-gradient(to right, #0056b3, #007bff);
+        }
+
+        footer {
+            background-color: #87CEEB;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: auto;
+        }
+
+        @media screen and (max-width: 768px) {
+            main {
+                margin-top: 60px;
+                padding: 15px;
+            }
+
+            .hero-section {
+                padding: 20px;
+                margin: 10px;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            .logo-title {
+                font-size: 2.5em;
+            }
+
+            .logo-container img {
+                width: 150px;
+                height: 150px;
+            }
+
+            .description {
+                font-size: 1.1em;
+                padding: 15px;
+            }
+
+            .social-icon {
+                padding: 12px 10px;
+                min-width: 80px;
+                max-width: 120px;
+            }
+
+            .social-icon i {
+                font-size: 1.5em;
+            }
+
+            .social-icon span {
+                font-size: 0.8em;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .social-icon {
+                min-width: 70px;
+                max-width: 100px;
+                padding: 10px 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <span class="menu-toggle" onclick="toggleMenu()">☰</span>
+            <ul id="nav-menu">
+                <li><a href="index.html">Asosiy</a></li>
+                <li><a href="./pages/courses.html">Kurslar</a></li>
+                <li><a href="./pages/about.html">About</a></li>
+                <li><a href="./pages/contact.html">Contact Us</a></li>
+                <li><a href="./pages/login.html">LogIn</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Asosiy Sahifa</h1>
+        <hr>
+        <div class="hero-section">
+            <h1 class="logo-title">StarDev</h1>
+            <div class="logo-container">
+                <img src="./images/stardevlogo.png" alt="MainLogo">
+            </div>
+            <div class="description">
+                <p>
+                    Assalomu alaykum. StarDev onlayn taʼlim platformasiga xush kelibsiz!
+                </p>
+                <p>
+                    <strong>StarDev</strong> - bu sayt orqali siz dasturlash tillarini oʻzbek tilida va asosiysi bepul o'rgana olasiz.
+                </p>
+                
+                <div class="platform-section">
+                    <h3>Bizning platformalarimiz</h3>
+                    <a href="https://t.me/stardev_bot" target="_blank" class="platform-link">
+                        <i class="fab fa-telegram"></i> StarDev Bot
+                    </a>
+                </div>
+
+                <div class="social-links">
+                    <h3>Ijtimoiy tarmoqlardagi profillarimiz</h3>
+                    <div class="social-icons">
+                        <a href="https://www.youtube.com/@StarDevN1" target="_blank" class="social-icon youtube">
+                            <i class="fab fa-youtube"></i>
+                            <span>YouTube</span>
+                        </a>
+                        
+                        <a href="https://t.me/StarDevN1" target="_blank" class="social-icon telegram">
+                            <i class="fab fa-telegram"></i>
+                            <span>Telegram</span>
+                        </a>
+                        
+                        <a href="https://www.instagram.com/stardeveloper_009/profilecard/?igsh=aDV4dnN3Nzh5N3Zt" target="_blank" class="social-icon instagram">
+                            <i class="fab fa-instagram"></i>
+                            <span>Instagram</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 StarDev. Barcha huquqlar himoyalangan.</p>
+    </footer>
+    <script src="./js/main.js"></script>
+</body>
+</html>
