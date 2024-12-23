@@ -1,2 +1,0 @@
-# StarDev
-StarDev sayti
